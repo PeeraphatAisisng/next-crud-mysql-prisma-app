@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:3000/api/products
+
+### GET (Read) ดึงข้อมูลทั้งหมดจากตาราง products
+GET {{baseUrl}}
+
+### POST (Create) เพิ่มข้อมูลลงตาราง products
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "z",
+  "description": "zzz",
+  "price": 300,
+  "quantity": 3
+}
+
+### GET (Read) ดึงข้อมูลตาม id จากตาราง products
+GET {{baseUrl}}/1
+
+### PUT (Update) แก้ไขข้อมูลตาม id ในตาราง products
+PUT {{baseUrl}}/5
+Content-Type: application/json
+
+{
+  "name": "x",
+  "description": "xxx edited",
+  "price": 150,
+  "quantity": 2
+}
+
+### DELETE (Delete) ลบข้อมูลตาม id จากตาราง products
+DELETE {{baseUrl}}/5
